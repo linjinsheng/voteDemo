@@ -1,0 +1,30 @@
+<template name="good">
+  <view class="muticol">
+    <view class="linewrap" style="width:30%;height:100px;">
+    <navigator url="good?id={{ID_}}" class="linewrap smalltext" hover-class="menueactive">
+      <image src="{{urlhead+(IMG?IMG:'def.png')}}" style="width:100%;height:100%;"></image>
+      </navigator>
+    </view>
+    <view class="linewrap mutirow" style="width:70%;">
+      <view class="linewrap muticol">
+        <checkbox-group id="c{{ID_}}" bindchange="checkboxChange">
+          <checkbox class="linewrap checkbox" value="{{ID_}}" checked="{{BCOUNT>0}}" />
+        </checkbox-group>
+        <view class="linewrap goodtitle">
+          <navigator url="good?id={{ID_}}" class="linewrap" hover-class="menueactive">{{GNAME}}</navigator>
+        </view>
+      </view>
+      <view class="linewrap">
+        <navigator url="good?id={{ID_}}" class="linewrap smalltext" hover-class="menueactive">{{GTEXT}}</navigator>
+      </view>
+      <view class="muticol">
+        <view class="smalltext-left">月销{{MCOUNT}}笔</view>
+        <view class="smalltext-left">库存{{STOCK}}</view>
+        <view class="smalltext-left">{{PNAME}}</view>
+      </view>
+      <view class="linewrap">
+        <view class="redtext">{{PRICE}}元</view>
+      </view>
+    </view>
+  </view>
+</template>

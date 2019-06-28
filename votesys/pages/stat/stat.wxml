@@ -1,0 +1,14 @@
+<image class="bgimg" src="{{img}}"></image>
+<view class="container">
+    <view class="votebox">
+        <view class="caption">
+            投票结果
+        </view>
+        <view class="linewrap list">
+          <view class="muticol bgc{{index%2}}" wx:for="{{items}}">
+            <view class="text">{{item.TEXT}}</view>
+            <view class="count">{{item.VCOUNT}}</view>
+          </view>
+        </view>
+    </view>
+</view>

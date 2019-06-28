@@ -1,0 +1,14 @@
+<image class="bgimg" src="{{img}}"></image>
+<view class="container">
+    <view class="votebox">
+        <view class="caption">
+            {{msg}}
+        </view>
+        <checkbox-group class="list" bindchange="checkboxChange">
+            <view class="checkline bgc{{index%2}}" wx:for="{{items}}">
+                <label class="text"><checkbox value="{{item.ID_}}" /> {{item.TEXT}}</label>
+            </view>
+        </checkbox-group>
+        <button class="submitbutton" bindtap="doVote">提交</button>
+    </view>
+</view>
